@@ -12,9 +12,7 @@ This redis-to-pushed container must be linked to a
 [redis](https://hub.docker.com/_/redis/) container (which must have the alias
 `redis`). Pushed.co application credentials must be supplied as environment variables. 
 
-    docker run --name redis-to-pushed --link redis:redis -e
-APP_KEY='YOUR_APP_KEY' -e APP_SECRET='YOUR_APP_SECRET' -e
-PUSHED_ID='YOUR_PUSHED_ID' -d digmore/redis-to-pushed
+    docker run --name redis-to-pushed --link redis:redis -e APP_KEY='YOUR_APP_KEY' -e APP_SECRET='YOUR_APP_SECRET' -e PUSHED_ID='YOUR_PUSHED_ID' -d digmore/redis-to-pushed
 
 **NOTE**: The default channel name is `notifications`. See the `CHANNEL` environment variable below to override this.
 
