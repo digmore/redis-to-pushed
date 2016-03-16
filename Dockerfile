@@ -2,8 +2,7 @@ FROM debian:jessie
 # MAINTAINER digmore
 
 RUN apt-get update \
-        && DEBIAN_FRONTEND=noninteractive apt-get install -y
---no-install-recommends \
+        && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
                 python-pip \
         && rm -fr /var/lib/apt/lists/* \
         && rm -fr /tmp/* \
